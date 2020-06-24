@@ -18,10 +18,6 @@ $('.navbar-brand').click(function (e){
 
 //커피 클릭 이벤트
 $('#1').click(function (e) {
-    $('#1').parent().addClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
     $('.swiper-container.center-block.1').show();
     $('.swiper-container.center-block.2').hide();
     $('.swiper-container.center-block.3').hide();
@@ -31,10 +27,6 @@ $('#1').click(function (e) {
 
 //음료 클릭 이벤트
 $('#2').click(function (e) {
-    $('#1').parent().removeClass('active');
-    $('#2').parent().addClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
     $('.swiper-container.center-block.1').hide();
     $('.swiper-container.center-block.2').show();
     $('.swiper-container.center-block.3').hide();
@@ -43,10 +35,6 @@ $('#2').click(function (e) {
 
 //디저트 클릭 이벤트
 $('#3').click(function (e) {
-    $('#1').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().addClass('active');
-    $('#2').parent().removeClass('active');
     $('.swiper-container.center-block.1').hide();
     $('.swiper-container.center-block.2').hide();
     $('.swiper-container.center-block.3').show();
@@ -56,10 +44,6 @@ $('#3').click(function (e) {
 
 //기타메뉴 클릭 이벤트
 $('#4').click(function (e) {
-    $('#1').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().removeClass('active');
-    $('#2').parent().addClass('active');
     $('.swiper-container.center-block.1').hide();
     $('.swiper-container.center-block.2').hide();
     $('.swiper-container.center-block.3').hide();
