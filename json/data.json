@@ -1,35 +1,42 @@
 [
     {
+        "id": "ame_ice",
         "name": "아메리카노(ICE)",
         "cnt": "1",
         "price": "2500"
     },
     {
+        "id": "ame_hot",
         "name": "아메리카노(HOT)",
         "cnt": "1",
         "price": "2000"
     },
     {
+        "id": "latte_ice",
         "name": "카페라떼(ICE)",
         "cnt": "1",
         "price": "3500"
     },
     {
+        "id": "latte_hot",
         "name": "카페라떼(HOT)",
         "cnt": "1",
         "price": "3000"
     },
     {
+        "id": "moka_ice",
         "name": "카페모카(ICE)",
         "cnt": "1",
         "price": "4000"
     },
     {
+        "id": "moka_hot",
         "name": "카페모카(HOT)",
         "cnt": "1",
         "price": "3500"
     },
     {
+        "id": "espresso",
         "name": "에스프레소",
         "cnt": "1",
         "price": "2500"
