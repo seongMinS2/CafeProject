@@ -1,5 +1,33 @@
 //메뉴 클릭 이벤트
-$('div.col-sm-2.menu1.ml-5.mt-5').click(function (e) {
+var click = function ClickOnEvent(){
+    var target = $('div.text-center.mt-3',this).text();
+    var addHTML = '';
+
+    alert(target);
+    
+}
+
+$('.menu1').click(function(){
+    click();
+});
+$('.menu2').click(function(){
+    click();
+});
+$('.menu3').click(function(){
+    click();
+});
+$('.menu4').click(function(){
+    click();
+});
+
+
+
+
+
+
+/*
+
+function (e) {
     var target = $('p',this).text();
     var addHTML = '';
  
@@ -24,4 +52,8 @@ $('div.col-sm-2.menu1.ml-5.mt-5').click(function (e) {
      }else{
          alert('중복값 존재');
      }
- });
+ }
+
+
+
+*/
