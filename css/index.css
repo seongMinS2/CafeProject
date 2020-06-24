@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #9E9E9E;
 }
 
@@ -10,15 +10,10 @@ body{
     
     width: 700px;
     height: 800px; */
-   height: 800px;
+    height: 800px;
 }
 
- .col-sm-2.menu1{
-    background-color: black;
-    color: white;
-    height: 139.22px;
-}
-.col-sm-4.menu1{
+.col-sm-2.menu1 {
     background-color: black;
     color: white;
     height: 139.22px;
@@ -27,18 +22,14 @@ body{
 .select-grid {
     background-color: white;
     border: 3px solid black;
-
     /* right: 30px;
 
     width : 500px;
     height : 550px; */
-    
     height: 600px;
-
 }
 
-
-.pay-grid{
+.pay-grid {
     background-color: white;
     border: 3px solid black;
     /* margin-top: 50px;
@@ -48,16 +39,7 @@ body{
     
     width: 500px;
     height: 200px; */
-
     height: 176px;
-}
-
-.selected-menu{
-    font-size: 13px;
-}
-
-.name-tag, .qty-tag, .price-tag{
-    border: 1px solid black;
 }
 
 .swiper-container {
@@ -71,4 +53,11 @@ body{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 30px;
+}
+
+.menu_coffee,
+.menu_drink,
+.menu_dessert,
+.menu_etclist {
+    display: none;
 }
