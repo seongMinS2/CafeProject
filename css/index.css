@@ -18,6 +18,11 @@ body{
     color: white;
     height: 139.22px;
 }
+.col-sm-4.menu1{
+    background-color: black;
+    color: white;
+    height: 139.22px;
+}
 
 .select-grid {
     background-color: white;
@@ -47,9 +52,13 @@ body{
     height: 176px;
 }
 
+.selected-menu{
+    font-size: 13px;
+}
 
-
-
+.name-tag, .qty-tag, .price-tag{
+    border: 1px solid black;
+}
 
 .swiper-container {
     width: 100%;
