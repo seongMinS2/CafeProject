@@ -6,6 +6,7 @@
 //     var addHTML =''; 
 //     addHTML+='<div class="swiper-slide">';
 //     addHTML+='  <div class="container">';
+//     addHTML+='      <div class="row ml-4 mt-4 menu menuList">';
 //     addHTML+='          <div class="col-sm-5 ml-3  mt-3  menu1">';
 //     addHTML+='              <img class="hvr-grow" src="../images/image.JPG" class="rounded">';
 //     addHTML+='              <div class="text-center mt-3">아메리카노</div>';
