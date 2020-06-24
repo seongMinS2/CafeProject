@@ -5,8 +5,9 @@ var menus = [];
 
 
 //메뉴 클릭 이벤트
-$('row.menu1').click(function (e) {
-
+$('row.menu').click(function (e) {
+   var target = $('div').val();
+   alert(target);
 })
 
 
