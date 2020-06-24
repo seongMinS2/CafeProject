@@ -1,35 +1,51 @@
 [
     {
+<<<<<<< HEAD
         "id": "ame_ice",
+=======
+>>>>>>> master
         "name": "아메리카노(ICE)",
         "cnt": "1",
         "price": "2500"
     },
     {
+<<<<<<< HEAD
         "id": "ame_hot",
+=======
+>>>>>>> master
         "name": "아메리카노(HOT)",
         "cnt": "1",
         "price": "2000"
     },
     {
+<<<<<<< HEAD
         "id": "latte_ice",
+=======
+>>>>>>> master
         "name": "카페라떼(ICE)",
         "cnt": "1",
         "price": "3500"
     },
     {
+<<<<<<< HEAD
         "id": "latte_hot",
+=======
+>>>>>>> master
         "name": "카페라떼(HOT)",
         "cnt": "1",
         "price": "3000"
     },
     {
+<<<<<<< HEAD
         "id": "moka_ice",
+=======
+>>>>>>> master
         "name": "카페모카(ICE)",
         "cnt": "1",
         "price": "4000"
     },
     {
+<<<<<<< HEAD
         "id": "moka_hot",
         "name": "카페모카(HOT)",
         "cnt": "1",
@@ -40,5 +56,10 @@
         "name": "에스프레소",
         "cnt": "1",
         "price": "2500"
+=======
+        "name": "카페모카(HOT)",
+        "cnt": "1",
+        "price": "3500"
+>>>>>>> master
     }
 ]
