@@ -61,3 +61,18 @@ body {
 .menu_etclist {
     display: none;
 }
+
+
+img{
+    width: 100%;
+    height: 80%;
+}
+.col-sm-5.menu1{
+    /* background-color: black; */
+    /* color: white; */
+    color: black;
+    height: 300px;
+}
+img:hover{
+    transform:scale(1.1); 
+}
