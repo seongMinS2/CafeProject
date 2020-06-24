@@ -2,6 +2,15 @@ body {
     background-color: #9E9E9E;
 }
 
+.navbar{
+    margin-left: 155px;
+    margin-right: 155px;
+}
+.selected {
+     background: #9E9E9E;
+     border-radius: 20%;
+}
+
 .menu-grid {
     /* overflow: scroll; */
     background-color: white;
