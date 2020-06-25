@@ -174,13 +174,13 @@ function jsonParse() {
     $.getJSON('../json/dessert.json', function (data) {
         localStorage.setItem("dessert",JSON.stringify(data));
         dessert = JSON.parse(localStorage.getItem("dessert"));
-        drinkMenu(dessert);
+        dessertMenu(dessert);
         
     });
     $.getJSON('../json/othermenu.json', function (data) {
         localStorage.setItem("other",JSON.stringify(data));
         other = JSON.parse(localStorage.getItem("other"));
-        drinkMenu(other);
+        otherMenu(other);
    
     });
 };

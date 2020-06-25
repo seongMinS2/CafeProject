@@ -1,8 +1,8 @@
 [
     {
-        "id": "",
-        "name": "",
-        "img": "../images/",
-        "price": ""
+        "id": "caramelscone",
+        "name": "카라멜 스콘",
+        "img": "../images/dessert1.jpg",
+        "price": "4400"
     }
 ]
