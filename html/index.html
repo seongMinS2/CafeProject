@@ -87,9 +87,10 @@
 					<!-- Swiper -->
 					<div class="swiper-container center-block 1 swiper2">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="container ">
-									<div class="row ml-4 mt-4 menu menuList">
+							
+							<!-- <div class="swiper-slide">
+								<div class="container">
+									<div class="row ml-4 mt-4 menu menuList 1">
 
 										<div class="col-sm-5 ml-3 mt-3 menu1">
 											<img class="hvr-grow" src="../images/image.JPG" class="rounded">
@@ -114,7 +115,7 @@
 
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<!-- Add Scroll Bar -->
 						<div class="swiper-button-next"></div>
@@ -160,7 +161,7 @@
 					<div class="swiper-container center-block 3 swiper2">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="container ">
+								<div class="container">
 									<div class="row ml-4 mt-4 menu ">
 										<div class="col-sm-5 ml-3  mt-3 menu3">
 											<img class="hvr-grow" src="../images/image.JPG" class="rounded">
@@ -324,6 +325,7 @@
 
 	<script>
 		var swiper = new Swiper('.swiper2', {
+			observer : true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
