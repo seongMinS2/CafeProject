@@ -59,19 +59,15 @@ $('#4').click(function (e) {
 function jsonParse() {
     $.getJSON('../json/coffee.json', function (data) { 
         coffee = data;
-        console.log(coffee);
     });
     $.getJSON('../json/drink.json', function (data) { 
         drink = data;
-        console.log(drink);
     });
     $.getJSON('../json/dessert.json', function (data) { 
         dessert = data;
-        console.log(dessert);
     });
     $.getJSON('../json/othermenu.json', function (data) { 
         othermenu = data;
-        console.log(othermenu);
     });
 };
 
