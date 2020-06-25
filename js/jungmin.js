@@ -1,45 +1,31 @@
-$('#div > img.hvr-grow').click(function(){
-    alert('clicked');
-    // tVal = $('div:col(0)').text();
-    // console.log(tVal);
+$(document).ready(function(){
+    var orderIDX = 0;
+    $('.menu1').click(function(){
+        var thisName = $('div',this).first().text();
+        var thisPrice = $('div',this).last().text();
+        var thisNum = parseInt(1);
+        var addHTML = '';
+
+        if($('div.order-list > .ordername').text() == thisName){
+            var befVal = $('div.order-list > .orderqty').text();
+            console.log(befVal);
+            $('div.order-list > .orderqty').text(++befVal);
+        }else{
+            addHTML += '<div class="row order-list" id='+orderIDX+'>';
+            addHTML += '<div class="col-sm-1 delorder z">❌</div>';
+            addHTML += '<div class="col-sm-3 ordername z">' + thisName + '</div>';
+            addHTML += '<div class="col-sm-1 plusorder z">➕</div>';
+            addHTML += '<div class="col-sm-2 orderqty z">'+thisNum+'</div>';
+            addHTML += '<div class="col-sm-1 minusorder z">➖</div>';
+            addHTML += '<div class="col-sm-3 orderprice z">'+ thisPrice +'</div>';
+            addHTML += '<div class="col-sm-1 orderprice z">원</div>';
+            addHTML += '</div>';
+            $('.orderslide > div.container.productList').after(addHTML);
+            addHTML = '';
+            orderIDX++;
+        }
+    });
 });
-
-$('.menu2').click(function(){
-    click();
-});
-$('.menu3').click(function(){
-    click();
-});
-$('.menu4').click(function(){
-    click();
-});
-
-$('.delorder').click(function(){
-    $('.order-list').empty();
-});
-
-$('.plusorder').click(function(){
-    var befVal = $('.orderqty').text();
-    if (befVal>9) {
-        alert('주문을 더 추가하실 수 없습니다.');
-    }else{
-        $('.orderqty').text(++befVal);    
-    }
-});
-
-$('.minusorder').click(function(){
-    var befVal = $('.orderqty').text();
-    if (befVal==1) {
-        $('.order-list').empty();
-    }else{
-        $('.orderqty').text(--befVal);    
-    }
-});
-
-
-
-
-
 /*
 
 function (e) {
@@ -68,7 +54,35 @@ function (e) {
          alert('중복값 존재');
      }
  }
-
-
-
 */
+
+
+
+$('.delorder').click(function(){
+    //$('.order-list').empty();
+});
+
+$('.plusorder').click(function(){
+    var befVal = $('.orderqty').text();
+    if (befVal>9) {
+        alert('주문을 더 추가하실 수 없습니다.');
+    }else{
+        $('.orderqty').text(++befVal);    
+    }
+});
+
+$('.minusorder').click(function(){
+    var befVal = $('.orderqty').text();
+    if (befVal==1) {
+        $('.order-list').empty();
+    }else{
+        $('.orderqty').text(--befVal);    
+    }
+});
+
+$('#6').click(function(){
+    var delYN = confirm('주문내역을 전부 삭제하시겠습니까?');
+    if (delYN == true) {
+        $('.order-list').empty();
+    }
+});

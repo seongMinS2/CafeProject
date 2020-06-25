@@ -51,8 +51,6 @@ function jsonParse() {
         var coffees = data;
         initMenu(coffees);
 
-
-
     });
 };
 
@@ -60,7 +58,6 @@ function jsonParse() {
 
 function init() {
     jsonParse();
-
     console.log(coffee.length);
 }
 
