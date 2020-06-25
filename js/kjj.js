@@ -90,3 +90,13 @@
 //     jsonParse();
 // }
 // init();
+function hi(){
+    console.log('hi');
+}
+$(document).ready(function(){
+    console.log($('.ame_ice'));
+    
+});
+function init(){
+}
+init();
