@@ -27,6 +27,7 @@ function initMenu(data) {
             num++;
             delNum++;
         } else if (i%4 != 0) {
+            console.log(delNum);
             var manu = $(`#${num-1}`);
             var html2 = '';
             html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
@@ -50,8 +51,6 @@ function jsonParse() {
         var coffees = data;
         initMenu(coffees);
 
-
-
     });
 };
 
@@ -59,7 +58,7 @@ function jsonParse() {
 
 function init() {
     jsonParse();
-
+    console.log(coffee.length);
 }
 
 init();
