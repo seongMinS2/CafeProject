@@ -47,3 +47,20 @@ function layer_popup(el){
 $('#6').click(function(){
     alert('set!!');
 });
+
+$(function () {
+    $("#draggable").draggable();
+    $("#droppable").droppable({
+        drop: function (event, ui) {
+            droppedmsg();
+        }
+    });
+});
+
+function droppedmsg() {
+    var result = confirm('주문이 완료되었습니다 !!!');
+    if(result) { 
+        location.replace('index.html'); 
+    }
+    return;
+}

@@ -20,8 +20,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 410px;
-    height: auto;
+    width: 500px;
+    height: 350px;
     background-color: #fff;
     border: 5px solid #666;
     z-index: 10;
@@ -69,3 +69,31 @@
     background-color: #1f326a;
     color: #fff;
   }
+
+  .btn-r {
+    position: absolute;
+    top: 280px;
+    right: 0px;
+
+  }
+
+  #draggable {
+    width: 100px;
+    height: 50px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+
+#droppable {
+    width: 150px;
+    height: 100px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+}
+
+.payment {
+  position: absolute;
+  left:20%;
+}

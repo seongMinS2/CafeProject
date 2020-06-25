@@ -87,7 +87,7 @@ img{
     color: black;
     height: 300px;
 }
-img:hover{
+img:hover:not(.notcss){
     transform:scale(1.1);
     cursor: pointer;
 }
