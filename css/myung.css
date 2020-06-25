@@ -1,0 +1,88 @@
+/* li:hover{
+    transform:scale(1.2);
+    cursor: pointer;
+} */
+.selected {
+    background: white;
+    color: black;
+    border-radius: 0%;
+}
+.navbar.bg-dark {
+    color: white;
+    background-color: #0e0e0e !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46);
+  }
+  .menu-grid {
+    border: 0px solid black;
+}
+.select-grid {
+    border: 0px solid black;
+}
+.pay-grid {
+    border: 0px solid black;
+}
+.navbar-expand-lg{
+    margin: 0;
+    padding: 0;
+    margin-left: 155px;
+    margin-right: 155px;
+
+}
+.col-sm-2.menu1 {
+    color: #0e0e0e;
+}
+/* body { */
+     /* background-color: #c8e2cb; index.css에서 변경해야함 */
+/* } */
+
+ .btn,
+.btn.btn-default {
+  color: #fff;
+  background-color: black; /*버튼 보여주는색*/
+  border-color: #999999;
+  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+.btn:hover,
+.btn.btn-default:hover {
+  color: #fff;
+  background-color: rgb(61, 59, 56); /*버튼 올렸을때*/
+  border-color: #7a7a7a;
+} 
+.btn:focus,
+.btn.focus,
+.btn:hover,
+.btn.btn-default:focus,
+.btn.btn-default.focus,
+.btn.btn-default:hover {
+  color: #fff;
+  background-color: rgb(61, 59, 56);
+  border-color: #7a7a7a;
+}
+.btn:active:hover,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:hover,
+.btn.active:focus,
+.btn.active.focus,
+.open>.btn.dropdown-toggle:hover,
+.open>.btn.dropdown-toggle:focus,
+.open>.btn.dropdown-toggle.focus,
+.show>.btn.dropdown-toggle:hover,
+.show>.btn.dropdown-toggle:focus,
+.show>.btn.dropdown-toggle.focus,
+.btn.btn-default:active:hover,
+.btn.btn-default:active:focus,
+.btn.btn-default:active.focus,
+.btn.btn-default.active:hover,
+.btn.btn-default.active:focus,
+.btn.btn-default.active.focus,
+.open>.btn.btn-default.dropdown-toggle:hover,
+.open>.btn.btn-default.dropdown-toggle:focus,
+.open>.btn.btn-default.dropdown-toggle.focus,
+.show>.btn.btn-default.dropdown-toggle:hover,
+.show>.btn.btn-default.dropdown-toggle:focus,
+.show>.btn.btn-default.dropdown-toggle.focus {
+  color: #fff;
+  background-color: black;
+  border-color: #595959;
+}
