@@ -1,6 +1,9 @@
-$('.menu1').click(function(){
-    $('div:eq(0)',this).text();
+$('#div > img.hvr-grow').click(function(){
+    alert('clicked');
+    // tVal = $('div:col(0)').text();
+    // console.log(tVal);
 });
+
 $('.menu2').click(function(){
     click();
 });
@@ -11,6 +14,27 @@ $('.menu4').click(function(){
     click();
 });
 
+$('.delorder').click(function(){
+    $('.order-list').empty();
+});
+
+$('.plusorder').click(function(){
+    var befVal = $('.orderqty').text();
+    if (befVal>9) {
+        alert('주문을 더 추가하실 수 없습니다.');
+    }else{
+        $('.orderqty').text(++befVal);    
+    }
+});
+
+$('.minusorder').click(function(){
+    var befVal = $('.orderqty').text();
+    if (befVal==1) {
+        $('.order-list').empty();
+    }else{
+        $('.orderqty').text(--befVal);    
+    }
+});
 
 
 
