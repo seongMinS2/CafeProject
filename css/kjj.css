@@ -16,3 +16,6 @@
 .z{
     padding: 0;
 }
+.delorder,.plusorder,.minusorder{
+    cursor: pointer;
+}
