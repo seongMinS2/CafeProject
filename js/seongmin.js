@@ -16,7 +16,7 @@ function initMenu(data) {
             html += '<div class="container">';
             html += `<div class="row ml-4 mt-4 menu menuList" id="${num}">`;
             html += '<div class="col-sm-5 ml-3 mt-3 menu1">';
-            html += `<img class="hvr-grow" src="../images/coffee${i+1}.JPG" class="rounded">`;
+            html += `<img class="hvr-grow" src=${data[i].img} class="rounded">`;
             html += `<div class="text-center mt-3">${data[i].name}</div>`;
             html += `<div class="text-center">&#8361;${data[i].price}</div>`;
             html += '</div>';
@@ -31,7 +31,7 @@ function initMenu(data) {
             var manu = $(`#${num-1}`);
             var html2 = '';
             html2 += '<div class="col-sm-5 ml-3 mt-3 menu1">';
-            html2 += `<img class="hvr-grow" src="../images/coffee${i+1}.JPG" class="rounded">`;
+            html2 += `<img class="hvr-grow" src=${data[i].img} class="rounded">`;
             html2 += `<div class="text-center mt-3">${data[i].name}</div>`;
             html2 += `<div class="text-center">&#8361;${data[i].price}</div>`;
             html2 += '</div>';
