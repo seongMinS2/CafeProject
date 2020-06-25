@@ -1,102 +1,199 @@
-// // const a = $("div.swiper-container.center-block1.swiper2>.swiper-wrapper > .swiper-slide");
-// // var b = document.querySelector(".swiper-container.center-block1 .swiper-wrapper");
-// // // var c = b.querySelector("div.swiper-wrapper");
-// // function init(){
-// //     console.log("e");
-// //     var addHTML =''; 
-// //     addHTML+='<div class="swiper-slide">';
-// //     addHTML+='  <div class="container">';
-// //     addHTML+='      <div class="row ml-4 mt-4 menu menuList">';
-// //     addHTML+='          <div class="col-sm-5 ml-3  mt-3  menu1">';
-// //     addHTML+='              <img class="hvr-grow" src="../images/image.JPG" class="rounded">';
-// //     addHTML+='              <div class="text-center mt-3">아메리카노</div>';
-// //     addHTML+='              <div class="text-center">&#8361;5,000</div></div>';
-// //     addHTML+='          <div class="col-sm-5 ml-5 mt-3 menu1">';
-// //     addHTML+='              <img src="../images/image.JPG" class="rounded">';
-// //     addHTML+='              <div class="text-center mt-3">아메리카노</div>';
-// //     addHTML+='              <div class="text-center">&#8361;5,000</div></div>';
-// //     addHTML+='          <div class="col-sm-5 ml-3 mt-5 menu1">';
-// //     addHTML+='              <img src="../images/image.JPG" class="rounded">';
-// //     addHTML+='              <div class="text-center mt-3">아메리카노</div>';
-// //     addHTML+='              <div class="text-center">&#8361;5,000</div>';
-// //     addHTML+='          </div>';
-// //     addHTML+='      </div>';
-// //     addHTML+='   </div>';
-// //     addHTML+='</div>';
 
-// //     a.after("eeee")
-// //     a.after(addHTML);
+// // 동적 메뉴 생성
 
-// // }
-// // init();
+// var coffees = [];
+// var drink = [];
+// var cof = [];
+// var cof = [];
 
-// var coffee =[];
-// var menuPage= $('.1>.swiper-wrapper');
-
-// function addMenuList(){
-//     var html ='';
-//     html += ''
-//     html+='<div class="swiper-slide">
-// 	html+='	<div class="container ">
-// 	html+='		<div class="row ml-4 mt-4 menu menuList">
-// 	html+='			<div class="col-sm-5 ml-3 mt-3 menu1">
-// 	html+='				<img class="hvr-grow" src="../images/image.JPG" class="rounded">
-// 	html+='				<div class="text-center mt-3">아메리카노</div>
-// 	html+='				<div class="text-center">&#8361;5,000</div>
-// 	html+='			</div>
-// 	html+='			<div class="col-sm-5 ml-5 mt-3 menu1">
-// 	html+='				<img src="../images/image.JPG" class="rounded">
-// 	html+='				<div class="text-center mt-3">아메리카노</div>
-// 	html+='				<div class="text-center">&#8361;5,000</div>
-// 	html+='			</div>
-// 	html+='			<div class="col-sm-5 ml-3 mt-5 menu1">
-// 	html+='				<img src="../images/image.JPG" class="rounded">
-// 	html+='				<div class="text-center mt-3">아메리카노</div>
-// 	html+='				<div class="text-center">&#8361;5,000</div>
-// 	html+='			</div>
-// 	html+='			<div class="col-sm-5 ml-5 mt-5 menu1">
-// 	html+='				<img src="../images/image.JPG" class="rounded">
-// 	html+='				<div class="text-center mt-3">아메리카노</div>
-// 	html+='				<div class="text-center">&#8361;5,000</div>
-// 	html+='			</div>
-// 	html+='		</div>
-// 	html+='	</div>
-// 	html+='</div>
-//     menuPage.append();
+// function coffeeMenu(data) {
+//     var num = 10;
+//     var delNum = 0;
+    
+//     console.log(data)
+//     var menuPage = $('.1>.swiper-wrapper');
+//     for (var i=0; i < data.length; i++) {
+//         if (i % 4 == 0) {
+//             var html = '';
+//             html += '<div class="swiper-slide">';
+//             html += '<div class="container">';
+//             html += `<div class="row ml-4 mt-4 menu menuList" id="coffee${num}">`;
+//             html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
+//             html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             menuPage.append(html);
+//             num++;
+//         } else if (i%4 != 0) {
+//             var manu = $(`#coffee${num-1}`);
+//             var html2 = '';
+//             html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
+//             html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html2 += '</div>';
+//             manu.append(html2);
+//         }
+        
+        
+//     }
+    
 // }
+// function drinkMenu(data) {
+//     var num = 10;
+//     var delNum = 0;
+    
+    
+//     var menuPage = $('.2>.swiper-wrapper');
+//     for (var i=0; i < data.length; i++) {
+//         if (i % 4 == 0) {
+//             var html = '';
+//             html += '<div class="swiper-slide">';
+//             html += '<div class="container">';
+//             html += `<div class="row ml-4 mt-4 menu menuList" id="drink${num}">`;
+//             html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
+//             html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             menuPage.append(html);
+//             num++;
+//         } else if (i%4 != 0) {
+//             var manu = $(`#drink${num-1}`);
+//             var html2 = '';
+//             html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
+//             html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html2 += '</div>';
+//             manu.append(html2);
+//         }
+        
+        
+//     }
+    
+// }
+// function dessertMenu(data) {
+//     var num = 10;
+//     var delNum = 0;
+    
+    
+//     var menuPage = $('.3>.swiper-wrapper');
+//     for (var i=0; i < data.length; i++) {
+//         if (i % 4 == 0) {
+//             var html = '';
+//             html += '<div class="swiper-slide">';
+//             html += '<div class="container">';
+//             html += `<div class="row ml-4 mt-4 menu menuList" id="dessert${num}">`;
+//             html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
+//             html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             menuPage.append(html);
+//             num++;
+//             delNum++;
+//         } else if (i%4 != 0) {
+//             var manu = $(`#dessert${num-1}`);
+//             var html2 = '';
+//             html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
+//             html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html2 += '</div>';
+//             manu.append(html2);
+//         }
+        
+        
+//     }
+    
+// }
+// function otherMenu(data) {
+//     var num = 10;
+//     var delNum = 0;
+    
+    
+//     var menuPage = $('.4>.swiper-wrapper');
+//     for (var i=0; i < data.length; i++) {
+//         if (i % 4 == 0) {
+//             var html = '';
+//             html += '<div class="swiper-slide">';
+//             html += '<div class="container">';
+//             html += `<div class="row ml-4 mt-4 menu menuList" id="othermenu${num}">`;
+//             html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
+//             html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             html += '</div>';
+//             menuPage.append(html);
+//             num++;
+//             delNum++;
+//         } else if (i%4 != 0) {
+//             var manu = $(`#othermenu${num-1}`);
+//             var html2 = '';
+//             html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
+//             html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
+//             html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
+//             html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
+//             html2 += '</div>';
+//             manu.append(html2);
+//         }
+        
+        
+//     }
+    
+// }
+
+
+// // JSON 파일 로드 --> JS배열로 변환
 // function jsonParse() {
-//     // var drink =[];
-//     // var dessert =[];
-//     // var othermenu =[];
-//     $.getJSON('../json/coffee.json', function (data) { 
-//         coffee = data;
-//         addMenuList();
+//     $.getJSON('../json/coffee.json', function (data) {
+//         localStorage.setItem("coffees", JSON.stringify(data));
+//         coffees = JSON.parse(localStorage.getItem("coffees"));
+//         coffeeMenu(coffees);
+
 //     });
-//     // $.getJSON('../json/drink.json', function (data) { 
-//     //     drink = data;
-//     //     console.log(drink);
-//     // });
-//     // $.getJSON('../json/dessert.json', function (data) { 
-//     //     dessert = data;
-//     //     console.log(dessert);
-//     // });
-//     // $.getJSON('../json/othermenu.json', function (data) { 
-//     //     othermenu = data;
-//     //     console.log(othermenu);
-//     // });
+//     $.getJSON('../json/drink.json', function (data) {
+//         localStorage.setItem("drinks",JSON.stringify(data));
+//         drink = JSON.parse(localStorage.getItem("drinks"));
+//         drinkMenu(drink);
+        
+//     });
+//     $.getJSON('../json/dessert.json', function (data) {
+//         localStorage.setItem("dessert",JSON.stringify(data));
+//         dessert = JSON.parse(localStorage.getItem("dessert"));
+//         drinkMenu(dessert);
+        
+//     });
+//     $.getJSON('../json/othermenu.json', function (data) {
+//         localStorage.setItem("other",JSON.stringify(data));
+//         other = JSON.parse(localStorage.getItem("other"));
+//         drinkMenu(other);
+   
+//     });
 // };
 
-// function init(){
-//     jsonParse();
-// }
-// init();
-function hi(){
-    console.log('hi');
-}
-$(document).ready(function(){
-    console.log($('.ame_ice'));
+// function choiceMenu(menuid){
     
-});
-function init(){
-}
-init();
+//     return id;
+// }
+
+// function init() {
+//     jsonParse();
+    
+// }
+
+// init();
