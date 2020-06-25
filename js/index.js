@@ -1,4 +1,7 @@
-var menus = [];
+var coffee = [];
+var drink = [];
+var dessert = [];
+var othermenu = [];
 
 
 // 메뉴 클릭 시 색깔 이벤트
@@ -52,11 +55,23 @@ $('#4').click(function (e) {
 
 
 
-// JSON 파일 로드
+// JSON 파일 로드(커피)
 function jsonParse() {
-    $.getJSON('../json/data.json', function (data) { 
-        menus = data;
-        console.log(menus);
+    $.getJSON('../json/coffee.json', function (data) { 
+        coffee = data;
+        console.log(coffee);
+    });
+    $.getJSON('../json/drink.json', function (data) { 
+        drink = data;
+        console.log(drink);
+    });
+    $.getJSON('../json/dessert.json', function (data) { 
+        dessert = data;
+        console.log(dessert);
+    });
+    $.getJSON('../json/othermenu.json', function (data) { 
+        othermenu = data;
+        console.log(othermenu);
     });
 };
 

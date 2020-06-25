@@ -1,14 +1,5 @@
-//메뉴 클릭 이벤트
-var click = function ClickOnEvent(){
-    var target = $('div.text-center.mt-3',this).text();
-    var addHTML = '';
-
-    alert(target);
-    
-}
-
 $('.menu1').click(function(){
-    click();
+    $('div:eq(0)',this).text();
 });
 $('.menu2').click(function(){
     click();
