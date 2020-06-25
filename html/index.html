@@ -87,7 +87,7 @@
 					<!-- Swiper -->
 					<div class="swiper-container center-block 1 swiper2">
 						<div class="swiper-wrapper">
-							
+
 							<!-- <div class="swiper-slide">
 								<div class="container">
 									<div class="row ml-4 mt-4 menu menuList 1">
@@ -172,7 +172,7 @@
 											<img src="../images/image.JPG" class="rounded">
 											<div class="text-center mt-3">아메리카노</div>
 											<div class="text-center">&#8361;5,000</div>
-										</div>
+									</div>
 
 									</div>
 								</div>
@@ -247,11 +247,6 @@
 				<div class="col-sm-12 pay-grid mt-4">
 					<div>
 						<div class="container">
-							<!-- 침범 -->
-							<!-- <li class="nav-item">
-								<a class="btn btn-default" href="javascript:;">결제</a>
-							</li> -->
-							<!-- ㅇ -->
 							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 								<a class="btn btn-default" href="#layer2" id="5">결제</a>
 
@@ -262,11 +257,21 @@
 											<div class="pop-conts">
 												<!--content //-->
 												<p class="ctxt mb20">Thank you.<br>
-													결제됐다
+													Your registration was submitted successfully.<br>
+													Selected invitees will be notified by e-mail on JANUARY
+													24th.<br><br>
+													Hope to see you soon!
+													<br><br>
+												<div class="payment">
+													<img src="../images/manwon.jpg" id="draggable"
+														class="ui-widget-content">
+
+													<img src="../images/bowl.jpg" id="droppable" class="notcss">
+												</div>
 												</p>
 
 												<div class="btn-r">
-													<a href="#" class="btn-layerClose">닫기</a>
+													<a href="#" class="btn-layerClose">Close</a>
 												</div>
 												<!--// content-->
 											</div>
@@ -309,6 +314,9 @@
 	<!--스위퍼 CDN 스크립트-->
 	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
+	<!-- 드래그 앤 드랍 -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<!-- Initialize Swiper -->
 	<script>
 		var swiper = new Swiper('.swiper1', {
@@ -325,7 +333,7 @@
 
 	<script>
 		var swiper = new Swiper('.swiper2', {
-			observer : true,
+			observer: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
