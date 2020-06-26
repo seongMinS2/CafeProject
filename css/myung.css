@@ -2,7 +2,7 @@
     transform:scale(1.2);
     cursor: pointer;
 } */
-.selected {
+/* .selected {
     background: white;
     color: black;
     border-radius: 0%;
@@ -24,28 +24,23 @@
 .navbar-expand-lg{
     margin: 0;
     padding: 0;
-    margin-left: 155px;
-    margin-right: 155px;
 
 }
 .col-sm-2.menu1 {
     color: #0e0e0e;
 }
-/* body { */
-     /* background-color: #c8e2cb; index.css에서 변경해야함 */
-/* } */
 
  .btn,
 .btn.btn-default {
   color: #fff;
-  background-color: black; /*버튼 보여주는색*/
+  background-color: black;
   border-color: #999999;
   box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
 }
 .btn:hover,
 .btn.btn-default:hover {
   color: #fff;
-  background-color: rgb(61, 59, 56); /*버튼 올렸을때*/
+  background-color: rgb(61, 59, 56);
   border-color: #7a7a7a;
 } 
 .btn:focus,
@@ -85,4 +80,7 @@
   color: #fff;
   background-color: black;
   border-color: #595959;
-}
+} */
+/* body { */
+     /* background-color: #c8e2cb; index.css에서 변경해야함 */
+/* } */

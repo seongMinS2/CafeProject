@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-	<title>Hello, world!</title>
+	<title>BIT CAFE</title>
 	<!--JQuery CDN-->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
@@ -31,9 +31,9 @@
 	<link href="../css/euna.css" rel="stylesheet" />
 	<link href="../css/jin.css" rel="stylesheet" />
 	<link href="../css/myung.css" rel="stylesheet" />
-	<link href="../css/kjj.css" rel="stylesheet" />
 	<link href="../css/jungmin.css" rel="stylesheet" />
 	<link href="../css/seongmin.css" rel="stylesheet" />
+	<link href="../css/kjj.css" rel="stylesheet" />
 
 
 </head>
@@ -50,19 +50,19 @@
 				<span class="navbar-toggler-bar navbar-kebab"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				<a class="navbar-brand" href="javascript:;">AIA Cafe</a>
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<a class="navbar-brand" style="text-align: center;" style="font-size: 2em;">BiT Cafe</a>
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin: 0;">
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;" id="1">커피 <span class="sr-only">(current)</span></a>
+						<a class="nav-link" id="1">커피 <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;" id=2>음료</a>
+						<a class="nav-link" id=2>음료</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;" id="3">디저트</a>
+						<a class="nav-link" id="3">디저트</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="javascript:;" id="4">기타메뉴</a>
+						<a class="nav-link" id="4">기타메뉴</a>
 					</li>
 				</ul>
 				<form class="form-inline ml-auto">
@@ -127,7 +127,7 @@
 
 					<div class="swiper-container center-block 2 swiper2">
 						<div class="swiper-wrapper">
-							
+
 						</div>
 						<!-- Add Scroll Bar -->
 						<div class="swiper-button-next"></div>
@@ -138,7 +138,7 @@
 
 					<div class="swiper-container center-block 3 swiper2">
 						<div class="swiper-wrapper">
-							
+
 						</div>
 						<!-- Add Scroll Bar -->
 						<div class="swiper-button-next"></div>
@@ -147,7 +147,7 @@
 
 					<div class="swiper-container center-block 4 swiper2">
 						<div class="swiper-wrapper">
-							
+
 						</div>
 						<!-- Add Scroll Bar -->
 						<div class="swiper-button-next"></div>
@@ -175,7 +175,7 @@
 							<P>Price</P>
 						</div>
 					</div>
-					<div class="swiper-container swiper1">
+					<div class="swiper-container swiper1 ordercon">
 						<div class="swiper-wrapper orderswiper">
 							<div class="swiper-slide orderslide">
 								<div class="container productList">
@@ -197,46 +197,57 @@
 
 
 				<div class="col-sm-12 pay-grid mt-4">
-					<div>
-						<div class="container">
-							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-								<a class="btn btn-default" href="#layer2" id="5">결제</a>
+					<div class="container-finalprice">
+						<div class="finalprice">
+							<div class="finalprice-text">
+								Total Price
+							</div>
+							<div class="finalprice-price">
+								<!-- 동적가격 -->0
+							</div>
+							<div class="finalwon">
+								원
+							</div>
+						</div>
+					</div>
+					<div class="container-button-pay">
+						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+							<a class="btn btn-default" href="#layer2" id="5">결제</a>
 
-								<div class="dim-layer">
-									<div class="dimBg"></div>
-									<div id="layer2" class="pop-layer">
-										<div class="pop-container">
-											<div class="pop-conts">
-												<!--content //-->
-												<p class="ctxt mb20">Thank you.<br>
-													Your registration was submitted successfully.<br>
-													Selected invitees will be notified by e-mail on JANUARY
-													24th.<br><br>
-													Hope to see you soon!
-													<br><br>
-												<div class="payment">
-													<img src="../images/manwon.jpg" id="draggable"
-														class="ui-widget-content">
+							<div class="dim-layer">
+								<div class="dimBg"></div>
+								<div id="layer2" class="pop-layer">
+									<div class="pop-container">
+										<div class="pop-conts">
+											<!--content //-->
+											<p class="ctxt mb20">결제하시겠어요?<br>
+												결제를 원하신다면<br>
+												바구니에 돈을 넣어주세요!<br><br>
+												결제가 완료됩니다.
+												<br><br>
+											<div class="payment">
+												<img src="../images/manwon.jpg" id="draggable"
+													class="ui-widget-content">
 
-													<img src="../images/bowl.jpg" id="droppable" class="notcss">
-												</div>
-												</p>
-
-												<div class="btn-r">
-													<a href="#" class="btn-layerClose">Close</a>
-												</div>
-												<!--// content-->
+												<img src="../images/bowl.jpg" id="droppable" class="notcss">
 											</div>
+											</p>
+
+											<div class="btn-r">
+												<a href="#" class="btn-layerClose">Close</a>
+											</div>
+											<!--// content-->
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<a class="btn btn-default" href="javascript:;" id="6">초기화</a>
+							<a class="btn btn-default" href="javascript:;" id="6">초기화</a>
 
-							</ul>
+						</ul>
 
-						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -302,7 +313,7 @@
 	<script src="../js/euna.js"></script>
 	<script src="../js/jin.js"></script>
 	<script src="../js/myung.js"></script>
-	
+
 
 </body>
 
