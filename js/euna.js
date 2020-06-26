@@ -45,7 +45,7 @@ function layer_popup(el){
 
 // 초기화 클릭 이벤트
 $('#6').click(function(){
-    alert('set!!');
+    location.replace('index.html');
 });
 
 $(function () {
