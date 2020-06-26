@@ -98,3 +98,35 @@
   position: absolute;
   left:20%;
 }
+
+.banner {
+  position: relative;
+  width: 1370px;
+  height: 150px;
+  top: 50px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  line-height: 150px;
+}
+
+.banner ul {
+  position: absolute;
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.banner ul li {
+  float: left;
+  width: 340px;
+  height: 210px;
+  margin: 0;
+  padding: 0;
+}
+
+div.banner img{
+  width: 220px;
+  height: 105px;
+}
