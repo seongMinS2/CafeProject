@@ -14,6 +14,11 @@
     font-size: 12px;
 
 }
+body{
+    background-image: url("../images/navimg2.png");
+    background-size: contain;
+    animation: fadeIn2 0.3s linear;
+}
 .z{
     /* border-top:1px solid black;
     border-bottom:1px solid black; */
