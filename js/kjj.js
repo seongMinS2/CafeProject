@@ -5,35 +5,56 @@ var coffees = [];
 var drinks = [];
 var dessert = [];
 var other = [];
-var category = [];
+
+//각각의 카테고리(커피,음료,디저트,기타)의 배열을 담는 배열 ( 이름값 비교를 위해 사용 )
+var category = [];  
+
+
 var sum = 0;
 
-//초기화버튼
+//초기화버튼이벤트 : 클릭했을때 페이지 다시 로드
 $(document).on('click', '#6', function () {
     location.replace('index.html');
 });
 
-//휴지통버튼이벤트
+//휴지통버튼이벤트 
 $(document).on('click', '.delorder', function (e) {
+    //에니메이션 처리를 위해 부모태그에 del클래스추가 (css에서 .del 클래스에 이벤트를 줌)
     $(this).parent('.order-list').addClass('del');
+
+    //애니메이션 처리를 기다리기위해 타임을 준다
     setTimeout(function () {
+        //.del 클래스를 가진 태그를 remove
         document.querySelector(".del").remove();
-        // $(this).parent('.del').remove();
+        //totalprice() 는 주문목록에 있는 값을 더해서 표시해준다 (주문목록갱신이 있을때마다 호출됨) 
         let sum = totalPrice($('.order-list').find('.orderprice'));
         $('.finalprice-price').text(sum);
     }, 300);
 });
+
+//플러스 버튼 이벤트
 $(document).on('click', '.plusorder', function () {
-    //수량 ++
+    //QTY와 Price를 +해줘야 함!!
+
+    // 플러스버튼이 있는 div의 부모태그를 선택 
+    //      --> 그 부모태그에서 find()함수를 통해 QTY와 PRICE를 담고있는 태그를 선택
     let $orderqty = $(this).parent().find('.orderqty');
     let $orderprice = $(this).parent().find('.orderprice');
+
+    //연산
     let currentprice = (parseInt($orderprice.text()) / parseInt($orderqty.text())) + parseInt($orderprice.text());
     let currentQty = parseInt($orderqty.text()) + 1;
+
+    //연산결과를 덮어씌움
     $orderprice.text(currentprice);
     $orderqty.text(currentQty);
+
+    //total price 갱신
     let sum = totalPrice($('.order-list').find('.orderprice'));
     $('.finalprice-price').text(sum);
 });
+
+//마이너스 버튼 이벤트 : 플러스 반대의 연산을 하면 되지만 if조건문을 넣어줘야함.
 $(document).on('click', '.minusorder', function () {
     let $order = $(this).parent('.order-list');
     let $orderqty = $(this).parent().find('.orderqty');
@@ -44,15 +65,29 @@ $(document).on('click', '.minusorder', function () {
         $orderprice.text(currentprice);
         $orderqty.text(currentQty);
     } else {
+        //QTY가 1일때 이벤트가 발생하면 아예 remove
         $order.remove();
     }
     let sum = totalPrice($('.order-list').find('.orderprice'));
     $('.finalprice-price').text(sum);
 });
 
+//total price를 구해주는 메서드
+//orderprice 라는 클래스값을 가진 테그의 text를 모두 골라서 더해준다
+function totalPrice($tag) {
+    sum = 0;
+    //each()함수 사용
+    $tag.each(function (index, item) {
+        //text는 문자열이므로 int변환
+        sum += parseInt($(item).text());
+    });
+    return sum;
+}
+
+//이미지클릭 >> 주문목록에 출력해주는 함수
 function addOrder(match) {
     var qty = 1;
-    // var a = ".order" + match.id;
+
     var a = ".order" + match.id;
     if ($(a).length === 0) {
         let html = '';
@@ -79,9 +114,12 @@ function addOrder(match) {
 
 }
 
+//메뉴의 이미지를 클릭했을때 이벤트
 function choiceMenu(id) {
-    // console.log(id);
+    //filter() 함수 쓰기위해서 배열하나 생성
     var match = [];
+
+    //전체카테고리에서 일치하는 id 값이 있으면 match 배열에 담기 --> 하나가 담겨지면 break;
     for (var i in category) {
         match = category[i].filter(function (item) {
             return item.id == id;
@@ -90,14 +128,18 @@ function choiceMenu(id) {
             break;
         }
     }
+
+    //id가 일치하는것은 1개뿐이므로 index는 0밖에없음
     addOrder(match[0]);
 }
+
+//커피메뉴리스트 출력
 function coffeeMenu(data) {
     var num = 10;
     var delNum = 0;
 
-    console.log(data)
     var menuPage = $('.1>.swiper-wrapper');
+    //한페이지에 4개의 메뉴가 보여져야 함
     for (var i = 0; i < data.length; i++) {
         if (i % 4 == 0) {
             var html = '';
@@ -129,10 +171,11 @@ function coffeeMenu(data) {
     }
 
 }
+
+//음료리스트생성
 function drinkMenu(data) {
     var num = 10;
     var delNum = 0;
-
 
     var menuPage = $('.2>.swiper-wrapper');
     for (var i = 0; i < data.length; i++) {
@@ -166,10 +209,11 @@ function drinkMenu(data) {
     }
 
 }
+
+//디저트메뉴생성
 function dessertMenu(data) {
     var num = 10;
     var delNum = 0;
-
 
     var menuPage = $('.3>.swiper-wrapper');
     for (var i = 0; i < data.length; i++) {
@@ -204,10 +248,11 @@ function dessertMenu(data) {
     }
 
 }
+
+//기타메뉴생성
 function otherMenu(data) {
     var num = 10;
     var delNum = 0;
-
 
     var menuPage = $('.4>.swiper-wrapper');
     for (var i = 0; i < data.length; i++) {
@@ -242,15 +287,12 @@ function otherMenu(data) {
     }
 
 }
-function totalPrice($tag) {
-    sum = 0;
-    $tag.each(function (index, item) {
-        sum += parseInt($(item).text());
-    });
-    return sum;
-}
+
 // JSON 파일 로드 --> JS배열로 변환
 function jsonParse() {
+    //제이슨파일을 get 해서 로컬스토리지에 set해주기
+    //갹 카테고리별로 베열을 만들어서 parsing해줌
+    //메뉴생성 메서드 호출
     $.getJSON('../json/coffee.json', function (data) {
         localStorage.setItem("coffees", JSON.stringify(data));
         coffees = JSON.parse(localStorage.getItem("coffees"));
