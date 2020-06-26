@@ -66,7 +66,15 @@ $(document).on('click', '.minusorder', function () {
         $orderqty.text(currentQty);
     } else {
         //QTY가 1일때 이벤트가 발생하면 아예 remove
-        $order.remove();
+        $order.addClass('del');
+        setTimeout(function () {
+            //.del 클래스를 가진 태그를 remove
+            document.querySelector(".del").remove();
+            //totalprice() 는 주문목록에 있는 값을 더해서 표시해준다 (주문목록갱신이 있을때마다 호출됨) 
+            let sum = totalPrice($('.order-list').find('.orderprice'));
+            $('.finalprice-price').text(sum);
+        }, 300);
+        // $order.remove();
     }
     let sum = totalPrice($('.order-list').find('.orderprice'));
     $('.finalprice-price').text(sum);
