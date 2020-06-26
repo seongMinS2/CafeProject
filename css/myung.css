@@ -84,3 +84,12 @@
 /* body { */
      /* background-color: #c8e2cb; index.css에서 변경해야함 */
 /* } */
+
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font-size: 20px;
+  height: 50px;
+}
+.navbar .navbar-brand {
+  font-size: 35px;
+}
