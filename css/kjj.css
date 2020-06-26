@@ -38,6 +38,7 @@
 
 .order-list{
     margin: auto;
+    margin-bottom: 15px;
     width: 99%;
     animation: fadeIn .3s ease-in-out;
 }
