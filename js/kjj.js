@@ -7,8 +7,7 @@ var dessert = [];
 var other = [];
 
 //각각의 카테고리(커피,음료,디저트,기타)의 배열을 담는 배열 ( 이름값 비교를 위해 사용 )
-var category = [];  
-
+var category = [];
 
 var sum = 0;
 
@@ -100,13 +99,13 @@ function addOrder(match) {
     if ($(a).length === 0) {
         let html = '';
         html += '<div class="row order-list order' + match.id + '">'
-            html += '<div class="col-sm-1 delorder z">🗑️</div>';
-            html += '<div class="col-sm-3 ordername z">' + match.name + '</div>';
-            html += '<div class="col-sm-1 plusorder z">➕</div>';
-            html += '<div class="col-sm-2 orderqty z">' + qty + '</div>';
-            html += '<div class="col-sm-1 minusorder z">➖</div>';
-            html += '<div class="col-sm-3 orderprice z">' + match.price + '</div>';
-            html += '<div class="col-sm-1 won z">원</div>';
+        html += '<div class="col-sm-1 delorder z">🗑️</div>';
+        html += '<div class="col-sm-3 ordername z">' + match.name + '</div>';
+        html += '<div class="col-sm-1 plusorder z">➕</div>';
+        html += '<div class="col-sm-2 orderqty z">' + qty + '</div>';
+        html += '<div class="col-sm-1 minusorder z">➖</div>';
+        html += '<div class="col-sm-3 orderprice z">' + match.price + '</div>';
+        html += '<div class="col-sm-1 won z">원</div>';
         html += '</div>';
         $('.productList').append(html);
 
@@ -141,200 +140,80 @@ function choiceMenu(id) {
     addOrder(match[0]);
 }
 
-//커피메뉴리스트 출력
-function coffeeMenu(data) {
-    var num = 10;
-    var delNum = 0;
+function displayMenu() {
+    const cateName = ["coffees", "drinks", "dessert", "other"];
+    for (let i = 0; i < category.length; i++) {
+        const index = i + 1;
+        const menuPage = $('.' + index + '>.swiper-wrapper');
+        let num = 10;
 
-    var menuPage = $('.1>.swiper-wrapper');
-    //한페이지에 4개의 메뉴가 보여져야 함
-    for (var i = 0; i < data.length; i++) {
-        if (i % 4 == 0) {
-            var html = '';
-            html += '<div class="swiper-slide">';
-            html += '<div class="container">';
-            html += `<div class="row ml-4 mt-4 menu menuList" id="coffee${num}">`;
-            html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
-            html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            menuPage.append(html);
-            num++;
-        } else if (i % 4 != 0) {
-            var manu = $(`#coffee${num - 1}`);
-            var html2 = '';
-            html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
-            html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html2 += '</div>';
-            manu.append(html2);
+        for (let j = 0; j < category[i].length; j++) {
+            if (j % 4 == 0) {
+                var html = '';
+                html += '<div class="swiper-slide">';
+                html += '<div class="container">';
+                html += `<div class="row ml-4 mt-4 menu menuList" id="${cateName[i]}${num}">`;
+                html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${category[i][j].id}">`;
+                html += `<img class="hvr-grow" src=${category[i][j].img} id=${category[i][j].id} class="rounded" onclick="choiceMenu(id)">`;
+                html += `<div class="text-center mt-3 menuname">${category[i][j].name}</div>`;
+                html += `<div class="text-center menuprice"> &#8361;${category[i][j].price}</div>`;
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+                html += '</div>';
+                menuPage.append(html);
+                num++;
+            } else if (j % 4 != 0) {
+                var manu = $(`#${cateName[i]}${num - 1}`);
+                var html2 = '';
+                html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${category[i][j].id}">`;
+                html2 += `<img class="hvr-grow" src=${category[i][j].img} id ="${category[i][j].id}" class="rounded" onclick="choiceMenu(id)">`;
+                html2 += `<div class="text-center mt-3 menuname">${category[i][j].name}</div>`;
+                html2 += `<div class="text-center menuprice"> &#8361;${category[i][j].price}</div>`;
+                html2 += '</div>';
+                manu.append(html2);
+            }
         }
-
-
     }
-
 }
-
-//음료리스트생성
-function drinkMenu(data) {
-    var num = 10;
-    var delNum = 0;
-
-    var menuPage = $('.2>.swiper-wrapper');
-    for (var i = 0; i < data.length; i++) {
-        if (i % 4 == 0) {
-            var html = '';
-            html += '<div class="swiper-slide">';
-            html += '<div class="container">';
-            html += `<div class="row ml-4 mt-4 menu menuList" id="drink${num}">`;
-            html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
-            html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            menuPage.append(html);
-            num++;
-        } else if (i % 4 != 0) {
-            var manu = $(`#drink${num - 1}`);
-            var html2 = '';
-            html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
-            html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html2 += '</div>';
-            manu.append(html2);
-        }
-
-
-    }
-
-}
-
-//디저트메뉴생성
-function dessertMenu(data) {
-    var num = 10;
-    var delNum = 0;
-
-    var menuPage = $('.3>.swiper-wrapper');
-    for (var i = 0; i < data.length; i++) {
-        if (i % 4 == 0) {
-            var html = '';
-            html += '<div class="swiper-slide">';
-            html += '<div class="container">';
-            html += `<div class="row ml-4 mt-4 menu menuList" id="dessert${num}">`;
-            html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
-            html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            menuPage.append(html);
-            num++;
-            delNum++;
-        } else if (i % 4 != 0) {
-            var manu = $(`#dessert${num - 1}`);
-            var html2 = '';
-            html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
-            html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html2 += '</div>';
-            manu.append(html2);
-        }
-
-
-    }
-
-}
-
-//기타메뉴생성
-function otherMenu(data) {
-    var num = 10;
-    var delNum = 0;
-
-    var menuPage = $('.4>.swiper-wrapper');
-    for (var i = 0; i < data.length; i++) {
-        if (i % 4 == 0) {
-            var html = '';
-            html += '<div class="swiper-slide">';
-            html += '<div class="container">';
-            html += `<div class="row ml-4 mt-4 menu menuList" id="othermenu${num}">`;
-            html += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html += `<img class="hvr-grow" src=${data[i].img} id=${data[i].id} class="rounded" onclick="choiceMenu(id)">`;
-            html += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            html += '</div>';
-            menuPage.append(html);
-            num++;
-            delNum++;
-        } else if (i % 4 != 0) {
-            var manu = $(`#othermenu${num - 1}`);
-            var html2 = '';
-            html2 += `<div class="col-sm-5 ml-3 mt-3 menu1 ${data[i].id}">`;
-            html2 += `<img class="hvr-grow" src=${data[i].img} id ="${data[i].id}" class="rounded" onclick="choiceMenu(id)">`;
-            html2 += `<div class="text-center mt-3 menuname">${data[i].name}</div>`;
-            html2 += `<div class="text-center menuprice"> &#8361;${data[i].price}</div>`;
-            html2 += '</div>';
-            manu.append(html2);
-        }
-
-
-    }
-
-}
-
 // JSON 파일 로드 --> JS배열로 변환
 function jsonParse() {
     //제이슨파일을 get 해서 로컬스토리지에 set해주기
     //갹 카테고리별로 베열을 만들어서 parsing해줌
     //메뉴생성 메서드 호출
-    $.getJSON('../json/coffee.json', function (data) {
-        localStorage.setItem("coffees", JSON.stringify(data));
-        coffees = JSON.parse(localStorage.getItem("coffees"));
-        coffeeMenu(coffees);
-        category.push(coffees);
+        $.getJSON('../json/coffee.json', function (data) {
+            localStorage.setItem("coffees", JSON.stringify(data));
+            coffees = JSON.parse(localStorage.getItem("coffees"));
+            category.push(coffees);
 
-    });
-    $.getJSON('../json/drink.json', function (data) {
-        localStorage.setItem("drinks", JSON.stringify(data));
-        drink = JSON.parse(localStorage.getItem("drinks"));
-        drinkMenu(drink);
-        category.push(drink);
+        });
+        $.getJSON('../json/drink.json', function (data) {
+            localStorage.setItem("drinks", JSON.stringify(data));
+            drink = JSON.parse(localStorage.getItem("drinks"));
+            category.push(drink);
 
-    });
-    $.getJSON('../json/dessert.json', function (data) {
-        localStorage.setItem("dessert", JSON.stringify(data));
-        dessert = JSON.parse(localStorage.getItem("dessert"));
-        dessertMenu(dessert);
-        category.push(dessert);
+        });
+        $.getJSON('../json/dessert.json', function (data) {
+            localStorage.setItem("dessert", JSON.stringify(data));
+            dessert = JSON.parse(localStorage.getItem("dessert"));
+            category.push(dessert);
 
-    });
-    $.getJSON('../json/othermenu.json', function (data) {
-        localStorage.setItem("other", JSON.stringify(data));
-        other = JSON.parse(localStorage.getItem("other"));
-        otherMenu(other);
-        category.push(other);
+        });
+        $.getJSON('../json/othermenu.json', function (data) {
+            localStorage.setItem("other", JSON.stringify(data));
+            other = JSON.parse(localStorage.getItem("other"));
+            category.push(other);
 
-    });
+        });
 };
 
 
 
 function init() {
     jsonParse();
+    setTimeout(function () {
+        displayMenu();
+    }, 300);
 }
 
 init();
