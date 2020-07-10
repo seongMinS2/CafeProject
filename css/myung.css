@@ -93,3 +93,9 @@
 .navbar .navbar-brand {
   font-size: 35px;
 }
+.bg-dark{
+  background-image: url("../images/navimg.png");
+  background-image: url("../images/beverage3.jpg");
+  height: 200px;
+  padding: 0;
+}
